@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jamuna’s All In One Home Renovation | Painting, Electrical, Plumbing, Tiles</title>
+<meta name="description" content="Painting, electrical, plumbing, tiles and full home renovation from one trusted team. Call 8682929419 for a free site visit and quote.">
+<link rel="icon" href="images/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#14388a;--ink:#0d2159;--orange:#f7931e;--bg:#f7f8fc;--muted:#56608a;--r:22px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;overflow-x:hidden}
+h1,h2,h3{font-family:'Bricolage Grotesque',sans-serif;line-height:1.1;letter-spacing:-.02em}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1160px;margin:auto;padding:0 22px}
+section{padding:90px 0}
+h2{font-size:clamp(30px,4.2vw,46px);font-weight:800;max-width:640px}
+.lead{color:var(--muted);max-width:560px;margin-top:14px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 26px;border-radius:999px;font-weight:600;border:2px solid transparent;cursor:pointer;font-size:16px;font-family:inherit;transition:transform .2s}
+.btn:hover{transform:translateY(-2px)}
+:focus-visible{outline:3px solid var(--orange);outline-offset:3px}
+.btn-o{background:var(--orange);color:#1b1200;box-shadow:0 10px 24px -8px rgba(247,147,30,.7)}
+.btn-l{border-color:rgba(255,255,255,.5);color:#fff}
+/* image slot: gradient + label until the real photo exists */
+.ph{position:relative;overflow:hidden;display:grid;place-items:center;text-align:center;color:#fff;background:linear-gradient(135deg,var(--c,#14388a),#0d2159)}
+.ph::after{content:attr(data-l);font-weight:600;font-size:14px;opacity:.85;padding:10px}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;transition:transform .6s}
+a:hover>.ph img,.ph:hover img{transform:scale(1.06)}
+/* nav */
+nav{position:fixed;inset:0 0 auto;z-index:50;background:rgba(255,255,255,.93);backdrop-filter:blur(10px);border-bottom:1px solid #e4e8f5}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:80px;transition:height .3s}
+.logo{font-family:'Bricolage Grotesque';font-weight:800;font-size:21px;color:var(--navy)}
+.logo b{color:var(--orange)}
+.links{display:flex;gap:24px;align-items:center;font-weight:500;font-size:15px}
+.links a:hover{color:var(--orange)}
+.links .btn{padding:10px 20px;font-size:14px}
+/* hero */
+.hero{position:relative;overflow:hidden;background:#14388a;color:#fff;padding:160px 0 100px}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}
+.hero h1{font-size:clamp(40px,6vw,70px);font-weight:800}
+.hero h1 em{font-style:normal;color:var(--orange)}
+.hero p{margin:22px 0 32px;color:#d6defa;max-width:480px;font-size:18px}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.house{padding-top:78px;position:relative;animation:rise 1s cubic-bezier(.2,.8,.2,1) both}
+.house::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);border-left:min(46vw,230px) solid transparent;border-right:min(46vw,230px) solid transparent;border-bottom:78px solid #fff}
+.rooms{background:#fff;border-radius:0 0 26px 26px;padding:18px;display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+.room{border-radius:16px;padding:16px 8px;text-align:center;color:#fff;font-weight:600;font-size:14px;grid-column:span 2;transition:transform .25s}
+.room:nth-child(n+4){grid-column:span 3}
+.room:hover{transform:scale(1.05) rotate(-1deg)}
+@keyframes rise{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:none}}
+/* stats */
+.stats{background:#fff;border-bottom:1px solid #e4e8f5;padding:34px 0}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+.stats strong{font-family:'Bricolage Grotesque';font-size:38px;color:var(--navy);display:block}
+.stats span{color:var(--muted);font-size:14px}
+/* about */
+.about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.collage{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.collage .ph{border-radius:var(--r);aspect-ratio:3/4}
+.collage .ph+.ph{margin-top:40px}
+.about ul{list-style:none;margin-top:22px;display:grid;gap:10px;font-weight:500}
+.about li::before{content:"✓";color:#fff;background:var(--orange);display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;font-size:13px;margin-right:10px}
+/* services */
+.grid5{display:grid;grid-template-columns:repeat(6,1fr);gap:22px;margin-top:44px}
+.card{grid-column:span 2;background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:0 14px 34px -22px rgba(13,33,89,.5);transition:transform .25s}
+.card:nth-child(n+4){grid-column:span 3}
+.card:hover{transform:translateY(-6px)}
+.card .ph{height:210px}
+.card div.b{padding:24px 26px 28px;border-top:6px solid var(--c)}
+.card h3{font-size:23px;margin-bottom:8px}
+.card p{color:var(--muted);font-size:15px}
+.card ul{list-style:none;margin-top:12px;font-size:14px;font-weight:500}
+.card li::before{content:"✓ ";color:var(--c);font-weight:700}
+/* before after */
+.ba{background:#fff}
+.ba .wrap{display:grid;grid-template-columns:1fr 1.3fr;gap:50px;align-items:center}
+.slider{position:relative;aspect-ratio:4/3;border-radius:var(--r);overflow:hidden;box-shadow:0 24px 50px -26px rgba(13,33,89,.7)}
+.slider .ph{position:absolute;inset:0;border-radius:0}
+.slider .ph::after{align-self:end;justify-self:start}
+.slider .before{clip-path:inset(0 50% 0 0)}
+.tag{position:absolute;z-index:2;bottom:16px;background:rgba(13,33,89,.8);color:#fff;padding:4px 14px;border-radius:99px;font-size:14px;font-weight:600}
+.slider input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;z-index:4}
+.bar{position:absolute;z-index:3;top:0;bottom:0;left:50%;width:4px;background:#fff;pointer-events:none}
+.bar::after{content:"↔";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:44px;height:44px;border-radius:50%;background:#fff;display:grid;place-items:center;color:var(--navy);font-weight:700;box-shadow:0 4px 14px rgba(0,0,0,.3)}
+/* gallery */
+.tabs{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.tabs button{font:inherit;font-weight:600;padding:9px 20px;border-radius:99px;border:1.5px solid #cfd7f0;background:#fff;color:var(--ink);cursor:pointer}
+.tabs button.on{background:var(--navy);border-color:var(--navy);color:#fff}
+.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));grid-auto-rows:210px;gap:16px;margin-top:30px}
+.gal .ph{border-radius:18px;cursor:zoom-in}
+.gal .tall{grid-row:span 2}
+.gal [hidden]{display:none}
+dialog{border:0;background:none;max-width:92vw;margin:auto}
+dialog::backdrop{background:rgba(5,12,40,.85)}
+dialog img{max-width:92vw;max-height:88vh;border-radius:14px;display:block}
+/* team + cta */
+.team{background:linear-gradient(rgba(13,33,89,.82),rgba(13,33,89,.88)),url(images/team.jpg) center/cover,#0d2159;color:#fff}
+.team .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;align-items:start}
+.team h2{grid-column:1/-1;margin-bottom:10px}
+.team div.i{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);padding:24px;border-radius:var(--r)}
+.team h3{font-size:19px;margin-bottom:6px}
+.team p{font-size:14px;color:#d6defa}
+/* process */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);margin-top:50px;counter-reset:s;position:relative}
+.steps::before{content:"";position:absolute;top:24px;left:6%;right:6%;border-top:3px dashed #b9c4e8}
+.step{position:relative;text-align:center;padding:0 14px;counter-increment:s}
+.step::before{content:counter(s);display:grid;place-items:center;width:50px;height:50px;border-radius:50%;background:var(--navy);color:#fff;font-weight:700;margin:0 auto 16px;position:relative;box-shadow:0 0 0 8px var(--bg)}
+.step h3{font-size:19px}.step p{color:var(--muted);font-size:14px;margin-top:6px}
+/* reviews */
+.rev{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
+.rev figure{background:#fff;border-radius:var(--r);padding:28px;border:1px solid #e4e8f5}
+.rev blockquote{font-size:15px;color:var(--muted)}
+.rev .who{display:flex;gap:12px;align-items:center;margin-top:18px;font-weight:600;font-size:14px}
+.rev .av{width:42px;height:42px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font-weight:700}
+.stars{color:var(--orange);letter-spacing:3px;margin-bottom:10px}
+/* areas */
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.chips span{background:#fff;border:1.5px solid #cfd7f0;padding:8px 18px;border-radius:99px;font-weight:500}
+.banner{border-radius:30px;margin:0 auto;padding:60px 40px;color:#fff;background:linear-gradient(110deg,rgba(247,147,30,.96),rgba(232,32,45,.85)),url(images/cta.jpg) center/cover,#f7931e;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.banner h2{max-width:560px}
+.banner .btn{background:#fff;color:var(--ink)}
+/* faq */
+.faq{max-width:760px;margin-top:36px}
+details{background:#fff;border-radius:16px;padding:18px 22px;margin-bottom:12px;border:1px solid #e4e8f5}
+summary{font-weight:600;cursor:pointer;list-style:none;display:flex;justify-content:space-between}
+summary::after{content:"+";font-size:22px;color:var(--orange);transition:transform .25s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{color:var(--muted);margin-top:10px;font-size:15px}
+/* contact */
+.contact{background:linear-gradient(160deg,#0d2159,#14388a);color:#fff}
+.contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.contact .lead{color:#d6defa}
+.big{font-family:'Bricolage Grotesque';font-size:clamp(30px,4vw,44px);font-weight:800;color:var(--orange);display:block;margin:22px 0 6px}
+form{background:#fff;color:var(--ink);padding:30px;border-radius:var(--r);display:grid;gap:14px}
+label{font-weight:600;font-size:14px;display:grid;gap:6px}
+input,select,textarea{font:inherit;padding:13px 14px;border:1.5px solid #d3daf0;border-radius:12px;background:var(--bg)}
+textarea{min-height:90px;resize:vertical}
+footer{background:#081640;color:#9fb0e3;padding:28px 0;text-align:center;font-size:14px}
+.float{position:fixed;right:18px;bottom:18px;z-index:60;display:grid;gap:12px}
+.float a{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;box-shadow:0 10px 24px -6px rgba(0,0,0,.45);font-size:26px}
+@media(max-width:860px){
+section{padding:64px 0}
+.links a:not(.btn){display:none}
+.hero{padding-top:130px}
+.hero .wrap,.about .wrap,.ba .wrap,.contact .wrap{grid-template-columns:1fr}
+.stats .wrap,.team .wrap{grid-template-columns:repeat(2,1fr)}
+.card,.card:nth-child(n+4){grid-column:span 6}
+.steps,.rev{grid-template-columns:1fr;gap:28px}.steps::before{display:none}
+.banner{padding:40px 26px}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto}}
+
+/* ===== v3 additions ===== */
+.logo img{height:68px;width:auto;display:block;transition:height .3s}
+nav.sm .wrap{height:64px}nav.sm .logo img{height:50px}
+nav.sm{box-shadow:0 8px 24px -16px rgba(13,33,89,.5)}
+.flogo{background:#fff;border-radius:18px;padding:12px 22px;height:96px;width:auto;margin-bottom:18px}
+#pre{position:fixed;inset:0;z-index:100;background:#fff;display:grid;place-items:center;transition:opacity .6s,visibility .6s}
+#pre img{width:min(260px,60vw);animation:zoom 1.2s cubic-bezier(.2,.8,.2,1) both}
+#pre.off{opacity:0;visibility:hidden}
+@keyframes zoom{from{opacity:0;transform:scale(.7)}to{opacity:1;transform:none}}
+#prog{position:fixed;top:0;left:0;height:4px;width:0;z-index:70;background:linear-gradient(90deg,var(--orange),#e8202d)}
+.blob{position:absolute;border-radius:50%;filter:blur(70px);animation:fl 9s ease-in-out infinite}
+.b1{width:360px;height:360px;background:#f7931e;top:-90px;right:-70px;opacity:.3}
+.b2{width:320px;height:320px;background:#1e8fe8;bottom:-110px;left:-70px;opacity:.38;animation-delay:-4s}
+@keyframes fl{50%{transform:translate(30px,40px) scale(1.12)}}
+.hero .wrap{position:relative;z-index:1}
+.hero h1{animation:rise 1s .1s cubic-bezier(.2,.8,.2,1) both}
+.hero p{animation:rise 1s .3s cubic-bezier(.2,.8,.2,1) both}
+.exp{font-weight:600;font-size:20px;margin:-8px 0 26px;animation:rise 1s .45s cubic-bezier(.2,.8,.2,1) both}
+#rot{display:inline-block;color:var(--orange);transition:opacity .3s,transform .3s}
+.cta{animation:rise 1s .6s cubic-bezier(.2,.8,.2,1) both}
+.room{animation:bob 4s ease-in-out infinite}
+.room:nth-child(2){animation-delay:-.8s}.room:nth-child(3){animation-delay:-1.6s}.room:nth-child(4){animation-delay:-2.4s}.room:nth-child(5){animation-delay:-3.2s}
+@keyframes bob{50%{translate:0 -9px}}
+.btn-o{position:relative;overflow:hidden}
+.btn-o::before{content:"";position:absolute;top:0;left:-80%;width:50%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.6),transparent);transform:skewX(-20deg);animation:shine 3.5s infinite}
+@keyframes shine{to{left:140%}}
+.marq{background:var(--ink);color:#fff;overflow:hidden;padding:16px 0;white-space:nowrap}
+.track{display:inline-flex;gap:46px;animation:mq 26s linear infinite}
+.track span{font-family:'Bricolage Grotesque';font-size:22px;font-weight:700;display:inline-flex;align-items:center;gap:14px}
+.track i{width:14px;height:14px;border-radius:50%}
+@keyframes mq{to{transform:translateX(-50%)}}
+.rv{opacity:0;transform:translateY(46px);transition:opacity .8s,transform .8s cubic-bezier(.2,.8,.2,1)}
+.rv.in{opacity:1;transform:none}
+.card{transform-style:preserve-3d}
+.card .ph img{transition:transform .8s}.card:hover .ph img{transform:scale(1.1)}
+.gal{grid-template-columns:repeat(3,1fr);grid-auto-rows:auto;gap:18px}
+.gal .ph{aspect-ratio:4/3;border-radius:20px}
+.gal .ph::before{content:attr(data-c);position:absolute;z-index:2;left:0;right:0;bottom:0;padding:34px 18px 14px;background:linear-gradient(transparent,rgba(13,33,89,.9));color:#fff;font-weight:600;text-align:left;transform:translateY(101%);transition:transform .35s}
+.gal .ph:hover::before{transform:none}
+.slider .before img{filter:saturate(.35) brightness(.78) contrast(.95) sepia(.25)}
+.banner{background-size:200% 200%,cover,auto;background-position:0 50%,center,0 0;animation:gm 8s ease-in-out infinite}
+@keyframes gm{50%{background-position:100% 50%,center,0 0}}
+.float a{animation:pulse 2.2s infinite}
+.float a+a{animation-delay:-1.1s}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(247,147,30,.6)}70%{box-shadow:0 0 0 18px rgba(247,147,30,0)}100%{box-shadow:0 0 0 0 rgba(247,147,30,0)}}
+.step::before{transition:transform .3s}.step:hover::before{transform:scale(1.15) rotate(8deg);background:var(--orange)}
+.team .i{transition:transform .3s,background .3s}.team .i:hover{transform:translateY(-8px);background:rgba(255,255,255,.18)}
+@media(max-width:860px){.gal{grid-template-columns:repeat(2,1fr);gap:12px}.logo img{height:54px}nav .wrap{height:68px}.hero{padding-top:120px}}
+
+.hero::before{content:"";position:absolute;inset:0;background:url(images/hero.jpg) center/cover;animation:kb 20s ease-in-out infinite alternate}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(13,33,89,.92) 0%,rgba(13,33,89,.7) 42%,rgba(13,33,89,.2) 100%)}
+@keyframes kb{to{transform:scale(1.12) translate(-1.5%,-1%)}}
+.b1,.b2{opacity:.18}
+.slider .before img{filter:sepia(.35) saturate(.4) brightness(.62) contrast(1.05)}
+.slider .before::before{content:"";position:absolute;inset:0;z-index:2;background:radial-gradient(ellipse at center,transparent 35%,rgba(40,25,10,.55) 100%);pointer-events:none}
+.tg{display:flex;gap:10px;margin-top:26px;flex-wrap:wrap}
+.tg button{font:inherit;font-weight:600;padding:10px 22px;border-radius:99px;border:1.5px solid #cfd7f0;background:#fff;color:var(--ink);cursor:pointer;transition:all .2s}
+.tg button.on{background:var(--navy);border-color:var(--navy);color:#fff}
+.slider .ph{z-index:1}.slider .before{z-index:2}
+</style>
+</head>
+<body>
+<div id="pre"><img src="images/logo.png" alt=""></div><div id="prog"></div>
+<nav id="nav"><div class="wrap">
+<a href="#top" class="logo"><img src="images/logo.png" alt="Jamuna’s All In One Home Renovation"></a>
+<div class="links"><a href="#about">About</a><a href="#services">Services</a><a href="#gallery">Gallery</a><a href="#reviews">Reviews</a><a class="btn btn-o" href="tel:+918682929419">Call 8682929419</a></div>
+</div></nav>
+
+<header class="hero" id="top"><i class="blob b1"></i><i class="blob b2"></i><div class="wrap">
+<div>
+<h1>One team for every corner of your <em>home.</em></h1>
+<p>Painting, electrical, plumbing, tiles and full renovation. One call, one quote, one team that finishes the job.</p>
+<div class="exp">We are experts in <b id="rot">Painting</b></div>
+<div class="cta"><a class="btn btn-o" href="#contact">Get a free quote</a><a class="btn btn-l" href="tel:+918682929419">Call now</a></div>
+</div>
+<div class="house"><div class="rooms" id="rooms"></div></div>
+</div></header>
+
+<div class="stats"><div class="wrap">
+<div><strong data-n="10" data-s="+">0</strong><span>Years of experience</span></div>
+<div><strong data-n="500" data-s="+">0</strong><span>Homes completed</span></div>
+<div><strong data-n="5" data-s="">0</strong><span>Services, one team</span></div>
+<div><strong data-n="100" data-s="%">0</strong><span>Free site visits</span></div>
+</div></div>
+<div class="marq"><div class="track" id="mq"></div></div>
+
+<section class="about" id="about"><div class="wrap">
+<div class="collage"><figure class="ph" data-l="Photo: team at work" style="--c:#14388a"><img src="images/about-1.jpg" alt="Jamuna’s team at work" loading="lazy" onerror="this.remove()"></figure><figure class="ph" data-l="Photo: finished room" style="--c:#f7931e"><img src="images/about-2.jpg" alt="Finished home interior" loading="lazy" onerror="this.remove()"></figure></div>
+<div><h2>A home project should not need five phone calls</h2>
+<p class="lead">Jamuna’s All In One brings painters, electricians, plumbers and tile masons together, so your renovation runs on one plan, one schedule and one price.</p>
+<ul><li>Free site visit and written quote</li><li>Skilled, trained workers for every trade</li><li>Work finished on the agreed date</li><li>Clean site and tidy handover</li></ul></div>
+</div></section>
+
+<section id="services" style="padding-top:0"><div class="wrap">
+<h2>Everything your home needs, under one roof</h2>
+<p class="lead">Pick one service or combine them. We plan the work so each trade finishes before the next begins.</p>
+<div class="grid5" id="svc"></div>
+</div></section>
+
+<section class="ba"><div class="wrap">
+<div><h2>See the difference</h2><p class="lead">Drag the slider, or tap a button to see the full photo.</p><div class="tg"><button data-v="100">Before</button><button data-v="0">After</button><button data-v="50" class="on">Compare</button></div></div>
+<div class="slider">
+<figure class="ph" data-l="After photo" style="--c:#f7931e"><img src="images/after.jpg" alt="Room after renovation" loading="lazy" onerror="this.remove()"></figure>
+<figure class="ph before" id="before" data-l="Before photo" style="--c:#6b6f7d"><img src="images/before.jpg" alt="Room before renovation" loading="lazy" onerror="this.remove()"></figure>
+<span class="tag" style="right:16px">After</span><span class="tag" style="left:16px">Before</span>
+<div class="bar" id="bar"></div>
+<input type="range" min="0" max="100" value="50" id="range" aria-label="Before and after comparison">
+</div></div></section>
+
+<section id="gallery"><div class="wrap">
+<h2>Our recent work</h2>
+<p class="lead">Real rooms, real finishes. Tap any photo to view it larger.</p>
+<div class="tabs" id="tabs"></div>
+<div class="gal" id="gal"></div>
+</div></section>
+
+<section class="team"><div class="wrap">
+<h2>Why families call us again</h2>
+<div class="i"><h3>One point of contact</h3><p>One call covers every trade. No coordination headaches for you.</p></div>
+<div class="i"><h3>Clear pricing</h3><p>Free site visit and a written quote before any work begins.</p></div>
+<div class="i"><h3>On-time finish</h3><p>We agree a date and keep it, and we clean up when done.</p></div>
+<div class="i"><h3>Skilled workers</h3><p>Trained painters, electricians, plumbers and tile masons.</p></div>
+</div></section>
+
+<section id="process"><div class="wrap">
+<h2>How it works</h2>
+<div class="steps">
+<div class="step"><h3>Call us</h3><p>Tell us what you need.</p></div>
+<div class="step"><h3>Site visit</h3><p>We measure and check, free.</p></div>
+<div class="step"><h3>Fixed quote</h3><p>You approve the price and date.</p></div>
+<div class="step"><h3>Work done</h3><p>We finish and hand over a clean home.</p></div>
+</div></section>
+
+<section id="reviews" style="padding-top:0"><div class="wrap">
+<h2>What customers say</h2>
+<div class="rev" id="rev"></div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+<h2>Areas we serve</h2>
+<div class="chips" id="areas"></div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap"><div class="banner">
+<h2>Ready to start? Your site visit is free.</h2>
+<a class="btn" href="#contact">Book a visit</a></div></div></section>
+
+<section id="faq" style="padding-top:0"><div class="wrap">
+<h2>Common questions</h2>
+<div class="faq">
+<details><summary>Is the site visit really free?</summary><p>Yes. We visit, take measurements and give you a quote at no charge.</p></details>
+<details><summary>Can you handle several works in one go?</summary><p>Yes. Painting, tiles, plumbing and electrical can be planned together so the work finishes sooner.</p></details>
+<details><summary>Which areas do you serve?</summary><p>Call us with your location and we will confirm.</p></details>
+<details><summary>How do I get a quote?</summary><p>Fill the form below or call 8682929419. We reply the same day.</p></details>
+</div></div></section>
+
+<section class="contact" id="contact"><div class="wrap">
+<div><h2>Tell us what needs fixing</h2><p class="lead">Send the details and we will reply on WhatsApp with a time for the site visit.</p>
+<a class="big" href="tel:+918682929419">8682929419</a><span class="lead">Call anytime during working hours</span></div>
+<form id="f">
+<label>Your name<input name="n" required autocomplete="name"></label>
+<label>Phone number<input name="p" type="tel" required autocomplete="tel"></label>
+<label>Service needed<select name="s"><option>Painting</option><option>Electrical</option><option>Plumbing</option><option>Renovation</option><option>Tiles</option><option>More than one</option></select></label>
+<label>Details<textarea name="m" placeholder="Area, room size, what needs to be done"></textarea></label>
+<button class="btn btn-o" type="submit">Send on WhatsApp</button>
+</form></div></section>
+
+<footer><img class="flogo" src="images/logo.png" alt="Jamuna’s All In One Home Renovation"><br>© <span id="y"></span> Jamuna’s All In One Home Renovation. Painting · Electrical · Plumbing · Renovation · Tiles</footer>
+<div class="float"><a href="https://wa.me/918682929419" style="background:#25d366" aria-label="WhatsApp">💬</a><a href="tel:+918682929419" style="background:var(--orange)" aria-label="Call">📞</a></div>
+<dialog id="lb"><img alt=""></dialog>
+
+<script>
+/* ===== CONFIG: edit here ===== */
+const PHONE='918682929419';
+const AREAS=['Area 1','Area 2','Area 3','Area 4','Area 5','Area 6'];            // replace with real service areas
+const REVIEWS=[                                                                   // replace with real customer reviews
+ ['Customer name','Area','Add a real review from a happy customer here.'],
+ ['Customer name','Area','Add a real review from a happy customer here.'],
+ ['Customer name','Area','Add a real review from a happy customer here.']];
+const S=[ // name, colour, image, text, points
+ ['Painting','#f7931e','painting','Smooth, long-lasting finishes for inside and outside walls.',['Interior and exterior','Putty and waterproofing','Texture and wood polish']],
+ ['Electrical','#e8202d','electrical','Safe wiring and fittings done by experienced hands.',['New wiring and rewiring','Switchboards and lights','Fan, AC and fault repairs']],
+ ['Plumbing','#1e8fe8','plumbing','Leaks fixed properly, new fittings installed cleanly.',['Leak and seepage repair','Bathroom and kitchen fittings','Pipelines and tanks']],
+ ['Renovation','#2fa23a','renovation','From a single room refresh to a complete home makeover.',['Room and kitchen remodel','False ceiling and carpentry','Repairs and finishing']],
+ ['Tiles','#7b2fbf','tiles','Level, clean tile work with tight joints that last.',['Floor and wall tiles','Granite and marble','Bathroom and kitchen tiling']]];
+const G=[ // file, category
+ ['g1','Painting',1],['g2','Tiles'],['g3','Electrical'],['g4','Plumbing',1],['g5','Renovation'],['g6','Painting'],
+ ['g7','Tiles'],['g8','Renovation',1],['g9','Plumbing']];
+/* ============================= */
+const $=id=>document.getElementById(id);
+const ph=(f,l,c,alt)=>`<figure class="ph" data-l="${l}" style="--c:${c}"><img src="images/${f}.jpg" alt="${alt||l}" loading="lazy" onerror="this.remove()"></figure>`;
+$('rooms').innerHTML=S.map(s=>`<div class="room" style="background:${s[1]}">${s[0]}</div>`).join('');
+$('svc').innerHTML=S.map(s=>`<article class="card" style="--c:${s[1]}">${ph(s[2],'Photo: '+s[0],s[1],s[0]+' work')}<div class="b"><h3>${s[0]}</h3><p>${s[3]}</p><ul>${s[4].map(p=>`<li>${p}</li>`).join('')}</ul></div></article>`).join('');
+const col=Object.fromEntries(S.map(s=>[s[0],s[1]]));
+$('gal').innerHTML=G.map(g=>`<div class="ph" data-c="${g[1]}" data-l="Photo: ${g[1]}" style="--c:${col[g[1]]}"><img src="images/${g[0]}.jpg" alt="${g[1]} project" loading="lazy" onerror="this.remove()"></div>`).join('');
+$('tabs').innerHTML=['All',...S.map(s=>s[0])].map((t,i)=>`<button class="${i?'':'on'}">${t}</button>`).join('');
+$('tabs').onclick=e=>{if(e.target.tagName!='BUTTON')return;[...$('tabs').children].forEach(b=>b.classList.toggle('on',b==e.target));
+ [...$('gal').children].forEach(d=>d.hidden=e.target.textContent!='All'&&d.dataset.c!=e.target.textContent)};
+$('gal').onclick=e=>{const i=e.target.closest('.ph')?.querySelector('img');if(i){$('lb').querySelector('img').src=i.src;$('lb').showModal()}};
+$('lb').onclick=()=>$('lb').close();
+$('rev').innerHTML=REVIEWS.map(r=>`<figure><div class="stars">★★★★★</div><blockquote>${r[2]}</blockquote><div class="who"><span class="av">${r[0][0]}</span><span>${r[0]}<br><small style="font-weight:400;color:var(--muted)">${r[1]}</small></span></div></figure>`).join('');
+$('areas').innerHTML=AREAS.map(a=>`<span>${a}</span>`).join('');
+$('y').textContent=new Date().getFullYear();
+let played=0,cur=50;
+document.querySelector('.tg').onclick=e=>{const b=e.target.closest('button');if(!b)return;played=2;[...b.parentNode.children].forEach(x=>x.classList.toggle('on',x==b));const to=+b.dataset.v;clearInterval(window.tw);window.tw=setInterval(()=>{cur+=(to-cur)*.18;if(Math.abs(to-cur)<.5){cur=to;clearInterval(window.tw)}upd(cur)},16)};
+
+const upd=v=>{cur=+v;$('range').value=v;$('before').style.clipPath=`inset(0 ${100-v}% 0 0)`;$('bar').style.left=v+'%'};
+$('range').oninput=e=>{played=2;upd(e.target.value)};
+new IntersectionObserver((es,o)=>{if(es[0].isIntersecting&&!played){played=1;o.disconnect();let t=0;const id=setInterval(()=>{if(played==2)return clearInterval(id);t+=.03;upd(50+42*Math.sin(t*3));if(t>2.1){clearInterval(id);upd(50)}},16)}},{threshold:.5}).observe(document.querySelector('.slider'));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;io.unobserve(e.target);
+ const t=+e.target.dataset.n,s=e.target.dataset.s;let c=0;const st=Math.max(1,Math.ceil(t/50));
+ const id=setInterval(()=>{c=Math.min(t,c+st);e.target.textContent=c+s;if(c>=t)clearInterval(id)},30)}),{threshold:.6});
+document.querySelectorAll('[data-n]').forEach(el=>io.observe(el));
+$('f').onsubmit=e=>{e.preventDefault();const d=new FormData(e.target),q=encodeURIComponent;
+ window.open(`https://wa.me/${PHONE}?text=`+q(`Hello, I need a quote.\nName: ${d.get('n')}\nPhone: ${d.get('p')}\nService: ${d.get('s')}\nDetails: ${d.get('m')}`),'_blank')};
+
+/* ===== animations ===== */
+$('mq').innerHTML=[...S,...S,...S,...S].map(x=>`<span><i style="background:${x[1]}"></i>${x[0]}</span>`).join('');
+const words=S.map(x=>x[0]);let wi=0;
+setInterval(()=>{const r=$('rot');r.style.opacity=0;r.style.transform='translateY(-10px)';setTimeout(()=>{wi=(wi+1)%words.length;r.textContent=words[wi];r.style.color=S[wi][1];r.style.transform='translateY(10px)';requestAnimationFrame(()=>{r.style.opacity=1;r.style.transform='none'})},300)},2200);
+const rvEls=document.querySelectorAll('h2,.lead,.card,.gal .ph,.rev figure,.step,.team .i,.collage .ph,.about li,details,.chips span,.banner,.contact form,.slider,.stats .wrap>div');
+const rio=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;rio.unobserve(e.target);const t=e.target;t.classList.add('in');setTimeout(()=>{t.classList.remove('rv','in');t.style.transitionDelay=''},1400)}),{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+rvEls.forEach(el=>{el.classList.add('rv');el.style.transitionDelay=Math.min([...el.parentNode.children].indexOf(el)*.09,.5)+'s';rio.observe(el)});
+const nav=$('nav'),pr=$('prog'),hs=document.querySelector('.house');
+addEventListener('scroll',()=>{const y=scrollY;nav.classList.toggle('sm',y>40);pr.style.width=(y/(document.body.scrollHeight-innerHeight)*100)+'%';if(y<900)hs.style.translate='0 '+(y*.1)+'px'},{passive:true});
+if(matchMedia('(hover:hover)').matches)document.querySelectorAll('.card').forEach(c=>{
+ c.addEventListener('mousemove',e=>{const b=c.getBoundingClientRect(),x=(e.clientX-b.left)/b.width-.5,y=(e.clientY-b.top)/b.height-.5;c.style.transform=`perspective(800px) rotateY(${x*8}deg) rotateX(${-y*8}deg) translateY(-6px)`});
+ c.addEventListener('mouseleave',()=>c.style.transform='')});
+const hidePre=()=>$('pre').classList.add('off');
+addEventListener('load',()=>setTimeout(hidePre,800));setTimeout(hidePre,3500);
+</script>
+</body>
+</html>
