@@ -723,7 +723,10 @@ const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return
  const id=setInterval(()=>{c=Math.min(t,c+st);e.target.textContent=c+s;if(c>=t)clearInterval(id)},30)}),{threshold:.6});
 document.querySelectorAll('[data-n]').forEach(el=>io.observe(el));
 $('f').onsubmit=e=>{e.preventDefault();const d=new FormData(e.target),q=encodeURIComponent;
- window.open(`https://wa.me/${PHONE}?text=`+q(`Hello, I need a quote.\nName: ${d.get('n')}\nPhone: ${d.get('p')}\nService: ${d.get('s')}\nDetails: ${d.get('m')}`),'_blank')};
+ const ic={'Painting':'🎨','Electrical':'⚡','Plumbing':'🚿','Renovation':'🏗️','Tiles':'🧱','Interior Work':'🛋️','Modular Kitchen':'🍳','False Ceiling':'✨','More than one':'🏠'};
+ const sv=d.get('s'),det=(d.get('m')||'').trim()||'Will share on call';
+ const msg=`🏠 *New Quote Request*\n*Jamuna’s All In One Home Renovation*\n━━━━━━━━━━━━━━\n\n👋 Hello! I would like a free quote.\n\n👤 *Name:* ${d.get('n')}\n📞 *Phone:* ${d.get('p')}\n${ic[sv]||'🛠️'} *Service:* ${sv}\n📝 *Details:* ${det}\n\n━━━━━━━━━━━━━━\n🙏 Please call me back and fix a free site visit.\nThank you! 😊`;
+ window.open(`https://wa.me/${PHONE}?text=`+q(msg),'_blank')};
 
 /* ===== animations ===== */
 $('mq').innerHTML=[...S,...S,...S,...S].map(x=>`<span><i style="background:${x[1]}"></i>${x[0]}</span>`).join('');
