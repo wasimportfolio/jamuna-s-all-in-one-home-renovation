@@ -15,7 +15,7 @@ const FBI='<svg viewBox="0 0 24 24" width="24" height="24" fill="#fff"><path d="
 
 /* ---------- Tamil dictionary ---------- */
 const TA={
-'About':'எங்களைப் பற்றி','Services':'சேவைகள்','Gallery':'கேலரி','Reviews':'மதிப்புரைகள்','Call 8682929419':'அழைக்க 8682929419',
+'About':'எங்களைப் பற்றி','Location':'இருப்பிடம்','Contact':'தொடர்பு','Services':'சேவைகள்','Gallery':'கேலரி','Reviews':'மதிப்புரைகள்','Call 8682929419':'அழைக்க 8682929419',
 'One team for every corner of your':'உங்கள் வீட்டின் ஒவ்வொரு மூலைக்கும் ஒரே','home.':'குழு.',
 'Painting, electrical, plumbing, tiles, interiors, modular kitchens and false ceilings. One call, one quote, one team that finishes the job.':'பெயிண்டிங், எலக்ட்ரிக்கல், பிளம்பிங், டைல்ஸ், இன்டீரியர், மாடுலர் கிச்சன், ஃபால்ஸ் சீலிங் அனைத்தும் ஒரே இடத்தில். ஒரு அழைப்பு, ஒரு விலைப்புள்ளி, வேலையை முடிக்கும் ஒரே குழு.',
 'We are experts in':'நாங்கள் நிபுணர்கள்:',
