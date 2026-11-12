@@ -136,6 +136,10 @@ let lang='en';try{lang=localStorage.getItem('lang')||'en'}catch(e){}
 const orig=new WeakMap(),origT=document.title;
 const btn=document.createElement('button');btn.className='lang';btn.type='button';
 const links=document.querySelector('.links');links.insertBefore(btn,links.lastElementChild);
+/* mobile: language button sits in the header bar (outside the menu); desktop: inside the links */
+const navWrap=document.querySelector('nav .wrap'),menuTg=document.querySelector('.menu-toggle'),mqM=window.matchMedia('(max-width:860px)');
+function placeLang(){if(mqM.matches&&menuTg){navWrap.insertBefore(btn,menuTg)}else{links.insertBefore(btn,links.lastElementChild)}}
+placeLang();(mqM.addEventListener?mqM.addEventListener('change',placeLang):mqM.addListener(placeLang));
 function tr(n){
  if(n.nodeType===3){const t=n.data.trim();if(!t)return;
   if(lang==='ta'){const v=TA[t];if(v){if(!orig.has(n))orig.set(n,n.data);n.data=n.data.replace(t,()=>v)}}
